@@ -1,0 +1,16 @@
+
+h1{
+  color: rgb(0, 85, 255);
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 30px;
+}
+div{
+  background-color: rgb(57, 57, 58);
+  padding: 30px;
+  height: 30px;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+}

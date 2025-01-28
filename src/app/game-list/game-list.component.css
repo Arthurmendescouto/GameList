@@ -1,16 +1,37 @@
 
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 h1{
-  color: rgb(0, 85, 255);
+  color: rgb(54, 179, 26);
   font-size: 25px;
   font-weight: bolder;
   text-align: center;
   padding: 30px;
 }
-div{
-  background-color: rgb(57, 57, 58);
-  padding: 30px;
-  height: 30px;
+
+.game-container{
+  background-color: rgb(5, 211, 122);
+  display: flex;
+  height: 150px;
   width: 80%;
   margin: auto;
   border-radius: 5px;
+}
+.game-title{
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.game-image
+{
+  display: block;
+  width: 130px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
 }

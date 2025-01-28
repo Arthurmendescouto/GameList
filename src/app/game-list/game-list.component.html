@@ -1,2 +1,13 @@
 <h1>game-list works!</h1>
-<div></div>
+
+  <div *ngIf="games.length > 0; else loading" class="container">
+    <!-- Criando uma div para cada jogo -->
+    <div *ngFor="let game of games" class="game-container">
+      <img [src]="game.imgUrl" alt="{{ game.title }}" class="game-image">
+      <div class="game-title">{{ game.title }}</div>
+    </div>
+  </div>
+  <ng-template #loading>
+    <p>Carregando...</p>
+  </ng-template>
+

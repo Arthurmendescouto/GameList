@@ -1,16 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router'; // Adicione isso aqui
 
 @Component({
   selector: 'app-game-list',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterModule],
-  templateUrl: './game-list.component.html',
-  styleUrls: ['./game-list.component.css']
+  imports: [CommonModule, HttpClientModule],
+  templateUrl: './rpggame-list.component.html',
+  styleUrls: ['./rpggame-list.component.html']
 })
-export class GameListComponent implements OnInit {
+export class RpggameListComponent implements OnInit {
   games: {
 shortDescription: any;id:number, title: String,imgUrl: String,
 year: number

@@ -1,37 +1,28 @@
-
 .container{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
-h1{
-  color: rgb(54, 179, 26);
-  font-size: 25px;
-  font-weight: bolder;
-  text-align: center;
-  padding: 30px;
-}
-
-.game-container{
-  background-color: rgb(5, 211, 122);
-  display: flex;
-  height: 150px;
-  width: 80%;
-  margin: auto;
-  border-radius: 5px;
-}
-.game-title{
-  color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: center;
   flex-grow: 1;
-}
-.game-image
-{
-  display: block;
-  width: 130px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+background-color: #121212;
+display: flex;
+justify-content: center;
+height: 100%;
 
+}
+.card{
+  height: 30%;
+  width: 80%;
+  margin: 20px;
+  background-color: #4f4f4f;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+h1{
+  color: aliceblue;
+}
+a{
+  font-size: 20px;
+  font-weight: bolder;
+  color: #007bff;
+  margin: 15px;
 }

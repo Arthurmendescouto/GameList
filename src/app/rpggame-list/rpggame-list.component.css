@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game-container {
+  background-color: rgb(33, 30, 30);
+  display: flex;
+  height: 150px;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.game-image {
+  display: block;
+  width: 130px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.game-title {
+  color: rgb(237, 235, 235);
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.short-description {
+  color: rgb(200, 200, 200);
+  font-size: 14px;
+  margin: 15px;
+}
+
+h1 {
+  color: rgb(54, 179, 26);
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 30px;
+}
+.year {
+  color: slateblue;
+  font-weight: bolder;
+  margin: 13px;
+}

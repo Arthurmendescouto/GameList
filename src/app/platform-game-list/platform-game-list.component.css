@@ -1,8 +1,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   padding-bottom: 20px;
+
+
 }
 
 .game-container {

@@ -1,16 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router'; // Adicione isso aqui
+import { Component, Injectable, OnInit } from '@angular/core';
+import {  RouterLinkActive, RouterModule } from '@angular/router'; // Adicione isso aqui
 
 @Component({
   selector: 'app-game-list',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterModule],
+  imports: [CommonModule,  RouterModule],
   templateUrl: './game-list.component.html',
   styleUrls: ['./game-list.component.css']
 })
 export class GameListComponent implements OnInit {
+  @Injectable({
+    providedIn:'root'
+  })
   games: {
 shortDescription: any;id:number, title: String,imgUrl: String,
 year: number

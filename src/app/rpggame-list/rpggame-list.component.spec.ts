@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RPGGameListComponent } from './rpggame-list.component';
+import { RpggameListComponent } from './rpggame-list.component';
 
 describe('RPGGameListComponent', () => {
-  let component: RPGGameListComponent;
-  let fixture: ComponentFixture<RPGGameListComponent>;
+  let component: RpggameListComponent;
+  let fixture: ComponentFixture<RpggameListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RPGGameListComponent]
+      imports: [RpggameListComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RPGGameListComponent);
+    fixture = TestBed.createComponent(RpggameListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

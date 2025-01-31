@@ -68,15 +68,15 @@ h1 {
   }
 
   .game-title {
-    font-size: 18px; /* Reduz o tamanho da fonte do título */
-    text-align: center; /* Centraliza o texto */
+    font-size: 18px; 
+    text-align: center;
   }
 
   .short-description {
-    font-size: 12px; /* Reduz o tamanho da fonte da descrição */
-    margin: 10px; /* Reduz as margens */
-    text-align: center; /* Centraliza o texto */
-    width: 100%; /* Garante que ocupe toda a largura do container */
-    word-wrap: break-word; /* Quebra o texto para caber no container */
+    font-size: 12px;
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    word-wrap: break-word; /
   }
 }

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from 'express';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game-list',
@@ -15,12 +15,14 @@ export class RpggameListComponent implements OnInit {
 shortDescription: any;id:number, title: String,imgUrl: String,
 year: number
 }[]=[];
+gameId?: number;
 
-  constructor(private http:HttpClient){}
+  constructor(private http:HttpClient, private router: Router){}
 
   ngOnInit(): void {
       this.getGames();
   }
+
   getGames(){
     this.http.get<any[]>('https://dslist-production-8088.up.railway.app/lists/1/games').subscribe({
       next: (data)=>{
@@ -36,5 +38,8 @@ year: number
         console.error('Erro ao carregar os jogos',err)
       }
     })
+  }
+  navigateToDetails(gameId: number) {
+    this.router.navigate(['/details', gameId]);
   }
 }

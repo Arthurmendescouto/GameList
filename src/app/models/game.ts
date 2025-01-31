@@ -4,4 +4,5 @@ export interface Game {
   shortDescription: string;
   imgUrl: string;
   year: number;
+  
 }

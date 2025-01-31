@@ -9,6 +9,6 @@ export const routes: Routes = [
   {path: '', component: GameListComponent},
   {path:'rpg', component: RpggameListComponent},
   {path:'platform', component: PlatformGameListComponent},
-  {path: 'details/:id', component: DetailsComponent}
+  {path: 'details/:gameId', component: DetailsComponent}
 
 ];

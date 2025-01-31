@@ -41,7 +41,7 @@ overflow: auto;
   max-width: 500px;
   padding: 30px 0px;
   cursor: pointer;
-  transition: color 0.3s ease; /* Transição suave para a cor do texto */
+  transition: color 0.3s ease; 
 
 }
 .platform:hover {

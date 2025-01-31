@@ -1,1 +1,20 @@
-<p>details works!</p>
+<div class="details-container" *ngIf="gameDetails; else loading">
+  <h1>{{ gameDetails.title }}</h1>
+
+  <div class="game-header">
+    <img [src]="gameDetails.imgUrl" alt="{{ gameDetails.title }}" class="game-image" />
+    <div class="game-info">
+      <p><strong>Year:</strong> {{ gameDetails.year }}</p>
+      <p><strong>Description:</strong> {{ gameDetails.shortDescription }}</p>
+    </div>
+  </div>
+
+  <div class="game-full-description">
+    <h3>Full Description</h3>
+    <p>{{ gameDetails.longDescription || 'No additional details available.' }}</p>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading game details...</p>
+</ng-template>

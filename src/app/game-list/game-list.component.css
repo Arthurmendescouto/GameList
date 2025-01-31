@@ -3,28 +3,70 @@
   flex-grow: 1;
 background-color: #131C2E;
 display: flex;
+
+flex-direction: column;
 justify-content: center;
 overflow: auto;
 
 }
 
-.card{
-  height: 30%;
-  width: 80%;
+.rpg{
   margin: 20px;
-  background-color: #4f4f4f;
+  background-color: #192436;
   flex-direction: column;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 10px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  padding: 30px 0px;
+}
+.rpg:hover {
+  border: 2px solid rgb(61, 168, 255);
+}
+.platform{
+  flex: 1;
+  margin: 20px;
+  background-color: #192436;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  min-width: 250px;
+  max-width: 500px;
+  padding: 30px 0px;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Transição suave para a cor do texto */
+
+}
+.platform:hover {
+  border: 2px solid rgb(61, 168, 255);
+}
+.content{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 h1{
   color: aliceblue;
+  text-align: center;
 }
-a{
+.rpgame{
   font-size: 20px;
   font-weight: bold;
-  color: #007bff;
+  color: #7DD3FC;
+  margin: 15px;
+  text-decoration: none;
+}
+.plat{
+  font-size: 20px;
+  font-weight: bold;
+  color: #6EE7B7;
   margin: 15px;
   text-decoration: none;
 }

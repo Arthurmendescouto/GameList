@@ -10,6 +10,10 @@
 }
 
 h1 {
-  margin-left: 30px;
-  font-size: 24px;
+  font-size: 1.5rem; /* Equivalente a text-2xl (24px) */
+  font-weight: bold;
+  background: linear-gradient(to right, #7DD3FC, #6EE7B7); /* Gradiente de from-primary-400 para to-accent-400 */
+  -webkit-background-clip: text; /* Necessário para aplicar o gradiente no texto */
+  background-clip: text; /* Para suporte em navegadores modernos */
+  color: transparent; /* Tornar o texto transparente */
 }

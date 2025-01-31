@@ -1,20 +1,23 @@
+/* Estilos para telas menores que 414px (celulares de 6.1 a 6.5 polegadas) */
+
+
 .container {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
   padding-bottom: 20px;
-
-
 }
 
 .game-container {
-  background-color: #4F4F4F;
+  background-color: #2A2D34;
   display: flex;
   height: 150px;
   width: 80%;
   margin: auto;
   border-radius: 5px;
   cursor: pointer;
+  overflow: hidden; /* Impede que o título ultrapasse */
+
 }
 
 .game-image {
@@ -39,14 +42,41 @@
 }
 
 h1 {
-  color: #007BE3;
+  color: rgba(240, 248, 255, 0.877);
   font-size: 25px;
   font-weight: bolder;
   text-align: center;
   padding: 30px;
 }
 .year {
-  color: slateblue;
+  color: #7DD4FA;
   font-weight: bolder;
   margin: 13px;
+}
+@media only screen and (max-width: 437px) {
+  .game-container {
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    padding: 10px; /* Adiciona padding interno */
+  }
+
+  .game-image {
+    width: 100%; /* Faz a imagem ocupar toda a largura do container */
+    border-radius: 5px; /* Aplica borda arredondada em todos os lados */
+    margin-bottom: 10px; /* Adiciona margem inferior para separar a imagem do texto */
+  }
+
+  .game-title {
+    font-size: 18px; /* Reduz o tamanho da fonte do título */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .short-description {
+    font-size: 12px; /* Reduz o tamanho da fonte da descrição */
+    margin: 10px; /* Reduz as margens */
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Garante que ocupe toda a largura do container */
+    word-wrap: break-word; /* Quebra o texto para caber no container */
+  }
 }

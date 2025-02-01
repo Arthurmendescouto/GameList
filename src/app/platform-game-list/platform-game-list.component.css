@@ -1,4 +1,3 @@
-/* Estilos para telas menores que 414px (celulares de 6.1 a 6.5 polegadas) */
 
 
 .container {
@@ -16,7 +15,7 @@
   margin: auto;
   border-radius: 5px;
   cursor: pointer;
-  overflow: hidden; /* Impede que o título ultrapasse */
+  overflow: hidden; 
 
 }
 
@@ -55,28 +54,28 @@ h1 {
 }
 @media only screen and (max-width: 437px) {
   .game-container {
-    height: auto; /* Altura automática para se ajustar ao conteúdo */
-    flex-direction: column; /* Empilha os elementos verticalmente */
-    align-items: center; /* Centraliza os elementos horizontalmente */
-    padding: 10px; /* Adiciona padding interno */
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
   }
 
   .game-image {
-    width: 100%; /* Faz a imagem ocupar toda a largura do container */
-    border-radius: 5px; /* Aplica borda arredondada em todos os lados */
-    margin-bottom: 10px; /* Adiciona margem inferior para separar a imagem do texto */
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
   }
 
   .game-title {
-    font-size: 18px; /* Reduz o tamanho da fonte do título */
-    text-align: center; /* Centraliza o texto */
+    font-size: 18px;
+    text-align: center;
   }
 
   .short-description {
-    font-size: 12px; /* Reduz o tamanho da fonte da descrição */
-    margin: 10px; /* Reduz as margens */
-    text-align: center; /* Centraliza o texto */
-    width: 100%; /* Garante que ocupe toda a largura do container */
-    word-wrap: break-word; /* Quebra o texto para caber no container */
+    font-size: 12px;
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    word-wrap: break-word;
   }
 }

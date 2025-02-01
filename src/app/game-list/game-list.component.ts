@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, Injectable, OnInit } from '@angular/core';
-import {  RouterLinkActive, RouterModule } from '@angular/router'; // Adicione isso aqui
+import {  RouterLinkActive, RouterModule } from '@angular/router'; 
 
 @Component({
   selector: 'app-game-list',

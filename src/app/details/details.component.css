@@ -1,0 +1,96 @@
+.details-container {
+  background-color: #0d1b2a;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+
+
+  gap: 25px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.game-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.game-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #1b263b;
+  flex-grow: 1;
+
+}
+
+.game-info {
+  display: flex;
+  gap: 20px;
+
+}
+
+
+
+.info-box strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.game-genres {
+  background-color: #1b263b;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.genre-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.genre {
+  background-color: #00a8e8;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.game-full-description {
+  background-color: #1b263b;
+  padding: 25px;
+  border-radius: 8px;
+  height: 300px;
+
+}
+
+.game-full-description h3 {
+  font-size: 1.3rem;
+
+
+}
+
+.content {
+  background-color: #1B263B;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px; /* Espaçamento entre as caixas */
+  border-radius: 10px;
+}
+.container-apiData{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.wrapper{
+  display: flex;
+gap: 25px;
+}

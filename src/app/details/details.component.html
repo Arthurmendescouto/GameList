@@ -1,20 +1,42 @@
-<div class="details-container" *ngIf="gameDetails; else loading">
+<div class="details-container" *ngIf="!loading; else loadingTemplate">
   <h1>{{ gameDetails.title }}</h1>
 
   <div class="game-header">
-    <img [src]="gameDetails.imgUrl" alt="{{ gameDetails.title }}" class="game-image" />
-    <div class="game-info">
-      <p><strong>Year:</strong> {{ gameDetails.year }}</p>
-      <p><strong>Description:</strong> {{ gameDetails.shortDescription }}</p>
+    <div class="container-apiData">
+      <div class="wrapper">
+        <img [src]="gameDetails.imgUrl" alt="{{ gameDetails.title }}" class="game-image" />
+        <div class="game-info">
+          <div class="info-box">
+            <div class="game-full-description">
+              <h3>Full Description</h3>
+              <p>{{ gameDetails.longDescription || 'No additional details available.' }}</p>
+            </div>
+          </div>
+      </div>
+      </div>
+
+
+        <div class="content">
+      <div class="info-box">
+        <strong>Year</strong>
+        <p>{{ gameDetails.year }}</p>
+      </div>
+      <div class="info-box">
+        <strong>Score</strong>
+        <p>{{ gameDetails.score }}⭐</p>
+      </div>
+      <div class="info-box">
+        <strong>Platforms</strong>
+        <p>{{ gameDetails.platforms }}</p>
+      </div>
+      <div class="info-box">
+        <strong>Genre</strong>
+        <p>{{ gameDetails.genre }}</p>
+      </div>
+      </div>
+        </div >
     </div>
   </div>
-
-  <div class="game-full-description">
-    <h3>Full Description</h3>
-    <p>{{ gameDetails.longDescription || 'No additional details available.' }}</p>
-  </div>
-</div>
-
-<ng-template #loading>
+<ng-template #loadingTemplate>
   <p>Loading game details...</p>
 </ng-template>

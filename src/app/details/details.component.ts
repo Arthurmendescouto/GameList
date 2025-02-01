@@ -7,11 +7,12 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-details',
   imports: [CommonModule],
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css'] // Corrigido para styleUrls (plural)
+  styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
   gameId!: number;
-  gameDetails: any; // Esta é a variável que armazena os detalhes do jogo
+  gameDetails: any;
+  loading: boolean | undefined;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
@@ -28,6 +29,8 @@ export class DetailsComponent {
     this.http.get(url).subscribe({
       next:(data)=>{
         this.gameDetails=data;
+        this.loading = false; // Definido como false quando os dados são carregados
+
         console.log('Game Details:', this.gameDetails);
       }
     }

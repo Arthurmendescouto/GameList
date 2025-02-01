@@ -28,14 +28,6 @@ h1 {
 
 }
 
-.game-info {
-  display: flex;
-  gap: 20px;
-
-}
-
-
-
 .info-box strong {
   display: block;
   font-size: 1.1rem;
@@ -94,3 +86,35 @@ h1 {
   display: flex;
 gap: 25px;
 }
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #182234;
+}
+
+.loading-bar {
+  width: 80%;
+  height: 20px;
+  background-color: #555;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #00bcd4;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.5s ease; /* Certifique-se de que a transição está aqui */
+}
+
+.loading-text {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+

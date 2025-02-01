@@ -12,7 +12,12 @@
     </div>
   </div>
   <ng-template #loading>
-    <p>Carregando...</p>
+    <div class="loading-container">
+      <div class="loading-bar">
+        <div class="progress-bar" [style.width.%]="progress"></div>
+      </div>
+      <p class="loading-text">Carregando... {{progress}}%</p>
+    </div>
   </ng-template>
 
 //

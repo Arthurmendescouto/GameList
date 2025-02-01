@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
+import { tick } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -12,9 +13,11 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailsComponent {
   gameId!: number;
   gameDetails: any;
-  loading: boolean | undefined;
+  loading: boolean =true;
+  progress: number = 0;
+  private interval: any;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(private route: ActivatedRoute, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params)=>{
@@ -25,15 +28,35 @@ export class DetailsComponent {
   }
 
   loadGameDetails() {
+    this.startProgress();
     const url = `https://dslist-production-8088.up.railway.app/games/${this.gameId}`;
     this.http.get(url).subscribe({
       next:(data)=>{
         this.gameDetails=data;
-        this.loading = false; // Definido como false quando os dados são carregados
-
+        this.loading = false;
+        this.progress = 100;
+        clearInterval(this.interval); // Para o intervalo após o carregamento
         console.log('Game Details:', this.gameDetails);
+        this.cdr.detectChanges(); // Garante que a view seja atualizada
+
+      },
+      error: (err) =>{
+        console.error('Erro ao carregar os detalhes do jogo', err);
+        this.loading=false;
+        this.progress = 100;
+        clearInterval(this.interval);
+        this.cdr.detectChanges();
       }
-    }
-    )
+    });
+  }
+
+  startProgress() {
+    // Simula o progresso de 0 a 100%
+    this.interval = setInterval(() => {
+      if (this.progress < 100) {
+        this.progress += 10;
+        this.cdr.detectChanges(); // Atualiza a view a cada incremento de progresso
+      }
+    }); // Atualiza a cada 300ms
   }
 }

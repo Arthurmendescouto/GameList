@@ -118,3 +118,74 @@ gap: 25px;
   margin-top: 20px;
 }
 
+@media only screen and (max-width: 750px) {
+  .details-container {
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .game-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .game-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .game-full-description {
+    height: auto;
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .info-box {
+    text-align: center;
+    width: 100%;
+  }
+
+  .game-genres {
+    text-align: center;
+  }
+
+  .genre-tags {
+    justify-content: center;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .loading-container {
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .loading-bar {
+    width: 90%;
+  }
+
+  .loading-text {
+    font-size: 1.2rem;
+  }
+}

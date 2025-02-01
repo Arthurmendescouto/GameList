@@ -55,8 +55,8 @@ export class DetailsComponent {
     this.interval = setInterval(() => {
       if (this.progress < 100) {
         this.progress += 10;
-        this.cdr.detectChanges(); // Atualiza a view a cada incremento de progresso
+        this.cdr.detectChanges();
       }
-    }); // Atualiza a cada 300ms
+    });
   }
 }

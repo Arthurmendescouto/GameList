@@ -8,7 +8,7 @@
 }
 
 .game-container {
-  background-color: #2A2D34;
+  background-color: #1B263B;
   display: flex;
   height: 150px;
   width: 80%;
@@ -16,6 +16,10 @@
   border-radius: 5px;
   cursor: pointer;
   overflow: hidden;
+
+}
+.game-content{
+  padding: 25px;
 
 }
 
@@ -28,8 +32,7 @@
 
 .game-title {
   color: rgb(237, 235, 235);
-  display: flex;
-  justify-content: center;
+
   flex-grow: 1;
   font-weight: bold;
 }
@@ -37,7 +40,7 @@
 .short-description {
   color: rgb(200, 200, 200);
   font-size: 14px;
-  margin: 15px;
+
 }
 
 h1 {
@@ -50,7 +53,7 @@ h1 {
 .year {
   color: #7DD4FA;
   font-weight: bolder;
-  margin: 13px;
+
 }
 @media only screen and (max-width: 600px) {
   .game-container {
@@ -72,44 +75,14 @@ h1 {
   }
 
   .short-description {
-    font-size: 12px;
+    font-size: 14px;
     margin: 10px;
     text-align: center;
     width: 100%;
     word-wrap: break-word;
   }
+  .game-content{
+    text-align: center;
+
+  }
 }
-.loading-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #182234;
-}
-
-.loading-bar {
-  width: 80%;
-  height: 20px;
-  background-color: #555;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: #00bcd4;
-  width: 0%;
-  border-radius: 10px;
-  transition: width 0.5s ease; /* Certifique-se de que a transição está aqui */
-}
-
-.loading-text {
-  color: white;
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-top: 20px;
-}
-
-
-

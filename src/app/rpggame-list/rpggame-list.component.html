@@ -1,8 +1,8 @@
 <h1>game-list works!</h1>
 
-  <div *ngIf="games.length > 0; else loading" class="container" >
+  <div *ngIf="games.length > 0; else loading" class="container" cdkDropList (cdkDropListDropped)="drop($event)">
 
-    <div *ngFor="let game of games" class="game-container" (click)="navigateToDetails(game.id)">
+    <div *ngFor="let game of games" cdkDrag  class="game-container" (click)="navigateToDetails(game.id)">
       <img [src]="game.imgUrl" alt="{{ game.title }}" class="game-image">
       <div class="game-content">
         <div class="game-title">{{ game.title }}</div>

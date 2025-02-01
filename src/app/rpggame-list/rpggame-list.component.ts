@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, DragDropModule],
   templateUrl: './rpggame-list.component.html',
   styleUrls: ['./rpggame-list.component.css']
 })
@@ -51,6 +53,18 @@ progress=0;
 
       }
     })
+  }
+  drop(event: CdkDragDrop<any[]>) {
+    moveItemInArray(this.games, event.previousIndex, event.currentIndex);
+    this.updateGameOrder();
+  }
+  updateGameOrder() {
+    const orderedIds = this.games.map((game, index) => ({ id: game.id, order: index + 1 }));
+
+    this.http.post('https://dslist-production-8088.up.railway.app/lists/1/games', orderedIds).subscribe({
+      next: () => console.log('Ordem atualizada com sucesso!'),
+      error: (err) => console.error('Erro ao atualizar a ordem', err),
+    });
   }
   navigateToDetails(gameId: number) {
     this.router.navigate(['/details', gameId]);

@@ -1,24 +1,25 @@
-# GameList 🎮
+# GameList 🎮  
 
-Este projeto é um site de uma lista de games desenvolvido com **Angular** e integrado a uma **API em Java Spring Boot**, criada por mim. A API está disponível no repositório:  
-🔗 [GameList-Backend](https://github.com/Arthurmendescouto/GameList-Backend)
+This project is a **game list website** built with **Angular**, integrated with a **Java Spring Boot API** that I developed.  
+The backend repository is available at:  
+🔗 [GameList-Backend](https://github.com/Arthurmendescouto/GameList-Backend)  
 
-## 🚀 Funcionalidades  
+## 🚀 Features  
 
-- Listagem de jogos consumidos da API  
-- Troca de ordem dos games nas listas utilizando **Local Storage**  
-- Interface responsiva e dinâmica  
+- Fetches and displays a list of games from the API  
+- Allows reordering of games in the lists using **Local Storage**  
+- Responsive and dynamic interface  
 
-## 🛠️ Tecnologias utilizadas  
+## 🛠️ Technologies Used  
 
 - **Angular 19**  
 - **TypeScript**  
 - **Java Spring Boot** (Backend)  
-- **Local Storage** para salvar a ordenação  
+- **Local Storage** for saving game order  
 
-## 🖥️ Servidor de Desenvolvimento  
+## 🖥️ Development Server  
 
-Para iniciar o servidor local, execute:  
+To start the local development server, run:  
 
 ```bash
 ng serve

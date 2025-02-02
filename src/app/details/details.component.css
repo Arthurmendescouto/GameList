@@ -105,10 +105,10 @@ gap: 25px;
 
 .progress-bar {
   height: 100%;
-  background-color: #00bcd4;
+  background-color: #fff;
   width: 0%;
   border-radius: 10px;
-  transition: width 0.5s ease; /* Certifique-se de que a transição está aqui */
+  transition: width 0.5s ease; 
 }
 
 .loading-text {

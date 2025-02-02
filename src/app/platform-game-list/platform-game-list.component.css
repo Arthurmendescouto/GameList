@@ -55,7 +55,38 @@ h1 {
   font-weight: bolder;
 
 }
-@media only screen and (max-width: 600px) {
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #182234;
+}
+
+.loading-bar {
+  width: 80%;
+  height: 20px;
+  background-color: #555;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #fff;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.5s ease; /* Certifique-se de que a transição está aqui */
+}
+
+.loading-text {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 880px) {
   .game-container {
     height: auto;
     flex-direction: column;
@@ -85,4 +116,5 @@ h1 {
     text-align: center;
 
   }
+
 }

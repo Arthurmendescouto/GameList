@@ -35,9 +35,9 @@ export class DetailsComponent {
         this.gameDetails=data;
         this.loading = false;
         this.progress = 100;
-        clearInterval(this.interval); // Para o intervalo após o carregamento
+        clearInterval(this.interval);
         console.log('Game Details:', this.gameDetails);
-        this.cdr.detectChanges(); // Garante que a view seja atualizada
+        this.cdr.detectChanges(); 
 
       },
       error: (err) =>{

@@ -1,24 +1,21 @@
-<h1>game-list works!</h1>
+<h1>Adventure and RPG Game List</h1>
 
-  <div *ngIf="games.length > 0; else loading" class="container" cdkDropList (cdkDropListDropped)="drop($event)">
-
-    <div *ngFor="let game of games" cdkDrag  class="game-container" (click)="navigateToDetails(game.id)">
-      <img [src]="game.imgUrl" alt="{{ game.title }}" class="game-image">
-      <div class="game-content">
-        <div class="game-title">{{ game.title }}</div>
-        <p class="short-description">{{game.shortDescription}}</p>
-        <p class="year">{{game.year}}</p>
-      </div>
+<div *ngIf="!loading; else loadingTemplate" class="container" cdkDropList (cdkDropListDropped)="drop($event)">
+  <div *ngFor="let game of games" cdkDrag class="game-container" (click)="navigateToDetails(game.id)">
+    <img [src]="game.imgUrl" alt="{{ game.title }}" class="game-image">
+    <div class="game-content">
+      <div class="game-title">{{ game.title }}</div>
+      <p class="short-description">{{ game.shortDescription }}</p>
+      <p class="year">{{ game.year }}</p>
     </div>
   </div>
-  <ng-template #loading>
-    <div class="loading-container">
-      <div class="loading-bar">
-        <div class="progress-bar" [style.width.%]="progress"></div>
-      </div>
-      <p class="loading-text">Carregando... {{progress}}%</p>
+</div>
+
+<ng-template #loadingTemplate>
+  <div class="loading-container">
+    <div class="loading-bar">
+      <div class="progress-bar" [style.width.%]="progress"></div>
     </div>
-  </ng-template>
-
-//
-
+    <p class="loading-text">Carregando... {{ progress }}%</p>
+  </div>
+</ng-template>

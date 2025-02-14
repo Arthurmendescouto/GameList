@@ -1,4 +1,5 @@
 # GameList 🎮  
+🔗 [Acesse o projeto aqui](https://game-list-ashy.vercel.app/)
 
 This project is a **game list website** built with **Angular**, integrated with a **Java Spring Boot API** that I developed.  
 The backend repository is available at:  

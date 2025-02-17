@@ -29,7 +29,7 @@ export class DetailsComponent {
 
   loadGameDetails() {
     this.startProgress();
-    const url = `https://dslist-production-8088.up.railway.app/games/${this.gameId}`;
+    const url = `'http://localhost:8080/games/${this.gameId}`;
     this.http.get(url).subscribe({
       next:(data)=>{
         this.gameDetails=data;
@@ -37,7 +37,7 @@ export class DetailsComponent {
         this.progress = 100;
         clearInterval(this.interval);
         console.log('Game Details:', this.gameDetails);
-        this.cdr.detectChanges(); 
+        this.cdr.detectChanges();
 
       },
       error: (err) =>{

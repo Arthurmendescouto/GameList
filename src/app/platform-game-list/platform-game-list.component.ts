@@ -37,7 +37,7 @@ export class PlatformGameListComponent implements OnInit {
       }
     });
 
-    this.http.get<any[]>('https://dslist-production-8088.up.railway.app/lists/2/games').subscribe({
+    this.http.get<any[]>('http://localhost:8080/lists/2/games').subscribe({
       next: (data) => {
         console.log(data);
         this.games = data.map((game) => ({

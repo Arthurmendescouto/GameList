@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, Injectable, OnInit } from '@angular/core';
-import {  RouterLinkActive, RouterModule } from '@angular/router'; 
+import {  RouterLinkActive, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-game-list',
@@ -25,7 +25,7 @@ year: number
       this.getGames();
   }
   getGames(){
-    this.http.get<any[]>('https://dslist-production-8088.up.railway.app/lists/1/games').subscribe({
+    this.http.get<any[]>('http://localhost:8080/lists/1/games').subscribe({
       next: (data)=>{
         console.log(data);
         this.games=data.map((game)=>({

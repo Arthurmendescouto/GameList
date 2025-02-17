@@ -37,7 +37,7 @@ export class RpgGameListComponent implements OnInit {
 
 
 
-    this.http.get<any[]>('https://dslist-production-8088.up.railway.app/lists/1/games').subscribe({
+    this.http.get<any[]>('http://localhost:8080/lists/1/games').subscribe({
       next: (data) => {
         console.log(data);
         this.games = data.map((game) => ({
@@ -48,7 +48,7 @@ export class RpgGameListComponent implements OnInit {
           year: game.year
         }));
 
-        
+
         const savedOrder = JSON.parse(localStorage.getItem('gameOrder') || '[]');
         if (savedOrder.length > 0) {
           this.games = this.reorderGames(savedOrder);

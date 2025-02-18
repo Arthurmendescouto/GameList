@@ -29,7 +29,7 @@ export class DetailsComponent {
 
   loadGameDetails() {
     this.startProgress();
-    const url = `'http://localhost:8080/games/${this.gameId}`;
+    const url = `http://localhost:8080/games/${this.gameId}`;
     this.http.get(url).subscribe({
       next:(data)=>{
         this.gameDetails=data;

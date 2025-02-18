@@ -54,7 +54,7 @@ export class DetailsComponent {
     // Simula o progresso de 0 a 100%
     this.interval = setInterval(() => {
       if (this.progress < 100) {
-        this.progress += 10;
+        this.progress += 20;
         this.cdr.detectChanges();
       }
     });

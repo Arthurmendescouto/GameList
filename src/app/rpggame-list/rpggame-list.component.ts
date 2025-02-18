@@ -40,14 +40,14 @@ export class RpgGameListComponent implements OnInit {
         next: () => {
           this.isBackendRunning = true;
           setTimeout(() => {
-            this.getGames(); // Chama getGames após o tempo de 3 segundos
-          }, 3000); // Atraso de 3 segundos para a barra de progresso ser visível
+            this.getGames();
+          }, 3000);
         },
         error: (err: HttpErrorResponse) => {
           if (err.status === 0 || err.status === 404) {
             this.isBackendRunning = false;
             this.loading = false;
-            this.progress = 100; // Finaliza a barra de progresso no erro
+            this.progress = 100;
             this.cdr.detectChanges();
           }
         }
@@ -71,13 +71,13 @@ export class RpgGameListComponent implements OnInit {
           this.games = this.reorderGames(savedOrder);
         }
         this.loading = false;
-        this.progress = 100; // Barra de progresso vai até 100% após carregar
+        this.progress = 100;
         this.cdr.detectChanges();
       },
       error: (err) => {
         console.error('Erro ao carregar os jogos', err);
         this.loading = false;
-        this.progress = 100; // Finaliza a barra de progresso em caso de erro
+        this.progress = 100;
         this.cdr.detectChanges();
       }
     });
@@ -104,17 +104,17 @@ export class RpgGameListComponent implements OnInit {
   }
 
   startProgress() {
-    // Inicia a barra de progresso e garante que ela vai de 0 a 100 em 3 segundos
+
     this.progress = 0;
-    let progressInterval = 100; // 3 segundos, aumentando de 10 em 10
+    let progressInterval = 100;
     this.interval = setInterval(() => {
       if (this.progress < 100) {
-        this.progress += 10;
+        this.progress += 20;
         this.cdr.detectChanges();
       } else {
-        clearInterval(this.interval); // Para a barra de progresso quando atingir 100%
+        clearInterval(this.interval);
       }
-    }, progressInterval); // Atualiza a cada 300ms
+    }, progressInterval);
   }
 
   navigateToDetails(gameId: number) {

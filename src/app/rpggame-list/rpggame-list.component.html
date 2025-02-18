@@ -1,12 +1,14 @@
 <h1>Adventure and RPG Game List</h1>
 
-<div *ngIf="!loading; else loadingTemplate" class="container" cdkDropList (cdkDropListDropped)="drop($event)">
-  <div *ngFor="let game of games" cdkDrag class="game-container" (click)="navigateToDetails(game.id)">
-    <img [src]="game.imgUrl" alt="{{ game.title }}" class="game-image">
-    <div class="game-content">
-      <div class="game-title">{{ game.title }}</div>
-      <p class="short-description">{{ game.shortDescription }}</p>
-      <p class="year">{{ game.year }}</p>
+<div *ngIf="!loading; else loadingTemplate">
+  <div *ngIf="isBackendRunning; else backendNotRunningTemplate" class="container" cdkDropList (cdkDropListDropped)="drop($event)">
+    <div *ngFor="let game of games" cdkDrag class="game-container" (click)="navigateToDetails(game.id)">
+      <img [src]="game.imgUrl" alt="{{ game.title }}" class="game-image">
+      <div class="game-content">
+        <div class="game-title">{{ game.title }}</div>
+        <p class="short-description">{{ game.shortDescription }}</p>
+        <p class="year">{{ game.year }}</p>
+      </div>
     </div>
   </div>
 </div>
@@ -17,5 +19,17 @@
       <div class="progress-bar" [style.width.%]="progress"></div>
     </div>
     <p class="loading-text">Carregando... {{ progress }}%</p>
+  </div>
+</ng-template>
+
+<ng-template #backendNotRunningTemplate>
+  <div class="backend-error-container">
+    <p>Backend is not running. Please follow the steps below:</p>
+    <p>
+      Clone the backend repository and run the project locally:
+      <a href="https://github.com/Arthurmendescouto/GameList-Backend" target="_blank">
+        Backend Repository
+      </a>
+    </p>
   </div>
 </ng-template>

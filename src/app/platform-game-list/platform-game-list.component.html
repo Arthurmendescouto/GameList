@@ -1,25 +1,37 @@
 <h1>Platform Game List
 </h1>
 
-  <div *ngIf="games.length > 0; else loading" class="container" cdkDropList (cdkDropListDropped)="drop($event)">
-
-    <div *ngFor="let game of games" cdkDrag  class="game-container" (click)="navigateToDetails(game.id)">
+<div *ngIf="!loading; else loadingTemplate">
+  <div *ngIf="isBackendRunning; else backendNotRunningTemplate" class="container" cdkDropList (cdkDropListDropped)="drop($event)">
+    <div *ngFor="let game of games" cdkDrag class="game-container" (click)="navigateToDetails(game.id)">
       <img [src]="game.imgUrl" alt="{{ game.title }}" class="game-image">
       <div class="game-content">
         <div class="game-title">{{ game.title }}</div>
-        <p class="short-description">{{game.shortDescription}}</p>
-        <p class="year">{{game.year}}</p>
+        <p class="short-description">{{ game.shortDescription }}</p>
+        <p class="year">{{ game.year }}</p>
       </div>
     </div>
   </div>
-  <ng-template #loading>
-    <div class="loading-container">
-      <div class="loading-bar">
-        <div class="progress-bar" [style.width.%]="progress"></div>
-      </div>
-      <p class="loading-text">Carregando... {{progress}}%</p>
-    </div>
-  </ng-template>
+</div>
 
-//
+<ng-template #loadingTemplate>
+  <div class="loading-container">
+    <div class="loading-bar">
+      <div class="progress-bar" [style.width.%]="progress"></div>
+    </div>
+    <p class="loading-text">Carregando... {{ progress }}%</p>
+  </div>
+</ng-template>
+
+<ng-template #backendNotRunningTemplate>
+  <div class="backend-error-container">
+    <p>Backend is not running. Please follow the steps below:</p>
+    <p>
+      Clone the backend repository and run the project locally:
+      <a href="https://github.com/Arthurmendescouto/GameList-Backend" target="_blank">
+        Backend Repository
+      </a>
+    </p>
+  </div>
+</ng-template>
 
